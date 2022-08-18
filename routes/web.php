@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\{HomeController, DetailController, CheckoutController};
 use App\Http\Controllers\Admin\{DashboardController, GamesController};
 
 /*
@@ -18,6 +19,15 @@ use App\Http\Controllers\Admin\{DashboardController, GamesController};
 Auth::routes();
 
 Route::get('/', HomeController::class)->name('home');
+Route::get('detail/{game:id}', [DetailController::class, 'index'])->name('detail');
+
+Route::get('/checkout/callback', [CheckoutController::class, 'callback']);
+
+Route::middleware(['auth'])->group(function() {
+    // Route::post('detail/{game:id}', [DetailController::class, 'process']);
+
+    Route::post('/checkout', [CheckoutController::class, 'process'])->name('checkout');
+});
 
 Route::middleware(['auth','admin'])->group(function() 
     {

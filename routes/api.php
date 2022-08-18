@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\{HomeController, DetailController, CheckoutController};
 use Illuminate\Support\Facades\Route;
 
 /*

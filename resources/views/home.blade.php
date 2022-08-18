@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@include('alert')
 <div class="page-content page-home">
       <section class="store-new-products mt-2">
         <div class="container">
@@ -17,7 +18,9 @@
                   <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-12">
-                        <img style="object-fit: fill" src="/storage/{{$game->photo}}" class="card-img" alt="...">
+                          <a href="{{ route('detail', $game->id) }}">
+                          <img style="object-fit: center; height: 200px;" src="/storage/{{$game->photo}}" class="card-img" alt="...">
+                          </a>
                         </div>
                         <div class="col-md-8">
                         <div class="card-body">
