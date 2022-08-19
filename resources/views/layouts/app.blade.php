@@ -13,11 +13,12 @@
 <body>
     <div id="app">
         <x-navbar>
-            <!-- INI Navbar -->
         </x-navbar>
         <main class="py-4">
             @yield('content')
         </main>
+        <x-footer>
+        </x-footer>
     </div>
 </body>
 </html>

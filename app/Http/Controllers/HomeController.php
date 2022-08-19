@@ -26,10 +26,9 @@ class HomeController extends Controller
     public function __invoke()
     {
         $user = Auth::user();
-        $games = Game::all();
 
         return view('/home', [
-            'games' => $games
+            'games' => Game::latest()->paginate(10),
         ]);
     }
 }

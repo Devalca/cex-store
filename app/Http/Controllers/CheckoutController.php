@@ -20,20 +20,13 @@ class CheckoutController extends Controller
         $user = Auth::user();
         $code = 'ETP-' . mt_rand(0000000, 999999);
 
-        // request()->validate([
-        //     'users_id' => 'required',
-        //     'nickname' => 'required',
-        //     'phone_number' => 'required',
-        //     'total_cost' => 'required',
-        //     'transaction_status' => 'required',
-        //     'code' => 'required',
-        //     'transactions_id' => 'required',
-        //     'products_id' => 'required',
-        //     'server_id' => 'required',
-        //     'game_id' => 'required',
-        //     'price' => 'required',
-        //     'shipping_status' => 'required'
-        // ]);
+        request()->validate([
+            'nickname' => 'required',
+            'game_id' => 'required',
+            'server_id' => 'required',
+            'phone_number' => 'required',
+            'total_cost' => 'required',
+        ]);
 
         $transaction = Transaction::create([
             'users_id' => $user->id,
