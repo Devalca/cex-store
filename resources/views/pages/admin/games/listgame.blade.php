@@ -1,5 +1,9 @@
 @extends('layouts.dashboard')
 
+@section('title')
+Games
+@endsection
+
 @section('body')
 @include('alert')
 <div class="section-content section-dashboard-home" data-aos="fade-up">

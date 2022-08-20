@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+Cex Store
+@endsection
+
 @section('content')
 @include('alert')
 <section class="pricing_part padding_top">
@@ -18,7 +22,7 @@
             <div class="card.bg-transparent mb-3" style="max-width: 540px;">
               <div class="row no-gutters">
                 <div class="col-md-12">
-                  <a href="{{ route('detail', $game->id) }}">
+                  <a href="{{ Auth::user() ? route('detail', $game->id) : route('login') }}">
                     <img style="object-fit: center; height: 200px;" src="/storage/{{$game->photo}}" class="card-img" alt="...">
                   </a>
                 </div>

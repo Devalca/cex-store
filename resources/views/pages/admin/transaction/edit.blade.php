@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    Transaction
+Update Transaction
 @endsection
 
 @section('body')

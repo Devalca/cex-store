@@ -1,5 +1,9 @@
 @extends('layouts.dashboard')
 
+@section('title')
+Add Game
+@endsection
+
 @section('body')
     @include('alert')
     <div class="card">

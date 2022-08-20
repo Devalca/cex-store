@@ -1,5 +1,9 @@
 @extends('layouts.detail')
 
+@section('title')
+Game Details
+@endsection
+
 @section('content')
 @include('alert')
 <div class="container">
@@ -70,7 +74,9 @@
                             <p class="mb-2" style="color: gray;">Informasi Pembayaran</p>
                             <p class="card-text"><small class="text-muted">Rp. {{number_format ($game->price) }}</small></p>
                         </div>
+                        @if (Auth::user()->roles == 'USER')
                         <button type="submit" class="btn btn-primary">Topup</button>
+                        @endif
                     </form>
                 </div>
             </div>

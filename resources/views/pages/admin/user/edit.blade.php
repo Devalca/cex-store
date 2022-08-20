@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    User
+Edit User
 @endsection
 
 @section('body')
