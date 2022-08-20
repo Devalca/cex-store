@@ -1,19 +1,19 @@
-@extends('layouts.app')
+@extends('layouts.detail')
 
 @section('content')
 @include('alert')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" style="padding-top: 100px;">
         <div class="col-md-8">
-            <a href="#" class="btn btn-danger" style="margin-bottom:10px">Kembali</a>
+            <a href="{{ url('/') }}" class="btn btn-danger" style="margin-bottom:10px">Kembali</a>
             <div class="card border-primary">
                 <div class="card-header bg-primary text-white">{{ $game->name }}</div>
                 <div class="card-body">
                     <div class="col-md-12 py-3">
                         <img style="object-fit: none; height: 200px;" src="/storage/{{$game->photo}}" class="card-img" alt="...">
                     </div>
-                    <h5 class="card-title">{{$game->categories}}</h5>
-                    <p class="card-text">{{$game->description}}</p>
+                    <h5 class="card-title" style="color: gray;">{{$game->categories}}</h5>
+                    <p class="card-text" style="color: gray;">{{$game->description}}</p>
                     <hr>
                     <p class="text-primary">Silahkan Lengkepai Data Untuk Melakukan Topup</p>
                     <form enctype="multipart/form-data" action="{{ route('checkout') }}" method="post">
@@ -67,10 +67,10 @@
                             </div>
                         </div>
                         <div class="col-12 py-3">
-                            <p class="mb-2">Informasi Pembayaran</p>
+                            <p class="mb-2" style="color: gray;">Informasi Pembayaran</p>
                             <p class="card-text"><small class="text-muted">Rp. {{number_format ($game->price) }}</small></p>
                         </div>
-                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="submit" class="btn btn-primary">Topup</button>
                     </form>
                 </div>
             </div>

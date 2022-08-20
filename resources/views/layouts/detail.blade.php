@@ -24,11 +24,9 @@
 <body>
     <div class="body_bg">
         <x-header></x-header>
-        <x-banner></x-banner>
         <div >
             @yield('content')
         </div>
-        <x-step></x-step>
         <x-footer></x-footer>
     </div>
 

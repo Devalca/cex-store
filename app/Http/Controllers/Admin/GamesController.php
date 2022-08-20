@@ -14,7 +14,7 @@ class GamesController extends Controller
     public function listgame()
     {
         return view('pages.admin.games.listgame', [
-            'games'=>Game::latest()->paginate(10),
+            'games'=>Game::latest()->paginate(7),
         ]);
     }
      

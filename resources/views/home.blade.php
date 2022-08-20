@@ -2,20 +2,20 @@
 
 @section('content')
 @include('alert')
-<div class="page-content page-home">
-  <section class="store-new-products mt-2">
+<section class="pricing_part padding_top">
     <div class="container">
-      <div class="row">
-        <div class="col-12" data-aos="fade-up">
-          <h5>Semua Game</h5>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section_tittle text-center">
+                    <h2>Semua Game</h2>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="card feature-card card-title p-3">
-        <div class="row">
-          @php $incrementGame = 0 @endphp
+        <div class="row justify-content-center">
+        @php $incrementGame = 0 @endphp
           @forelse ($games as $game)
-          <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="{{ $incrementGame+= 100 }}">
-            <div class="card mb-3" style="max-width: 540px;">
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="{{ $incrementGame+= 100 }}">
+            <div class="card.bg-transparent mb-3" style="max-width: 540px;">
               <div class="row no-gutters">
                 <div class="col-md-12">
                   <a href="{{ route('detail', $game->id) }}">
@@ -31,15 +31,14 @@
               </div>
             </div>
           </div>
-          {{$games->links()}}
           @empty
           <div class="col-12 text-center py-5" data-aos="fade-up" data-aos-delay="100">
             No Products Found
           </div>
           @endforelse
         </div>
-      </div>
+        {{$games->links()}}
     </div>
-  </section>
-</div>
+</section>
+
 @endsection

@@ -11,6 +11,7 @@
     
 </head>
     <body>
+        <div class="body_bg">
         <x-navbar></x-navbar>
         <div class="container-fluid py-3">
             <div class="row">
@@ -21,6 +22,7 @@
                     @yield('body')
                 </div>
             </div>
+        </div>
         </div>
     </body>
 </html>

@@ -9,8 +9,8 @@ Transaction
 <div class="section-content section-dashboard-home" data-aos="fade-up">
     <div class="container-fluid">
         <div class="dashboard-heading">
-            <h2 class="dashboard-title">Transaksi</h2>
-            <p class="dashboard-subtitle">Semua Transaksi</p>
+            <h2 class="dashboard-title text-white">Transaksi</h2>
+            <p class="dashboard-subtitle text-white">Semua Transaksi</p>
         </div>
         <div class="dashboard-content">
             <div class="row">

@@ -8,13 +8,12 @@ Dashboard
 <div class="section-content section-dashboard-home" data-aos="fade-up">
   <div class="container-fluid">
     <div class="dashboard-heading">
-      <h2 class="dashboard-title">Dashboard</h2>
-      <p class="dashboard-subtitle">Jangan lupa hanya topup di Cex Store</p>
+      <h2 class="dashboard-title text-white">Dashboard</h2>
+      <p class="dashboard-subtitle text-white">Semua history transaksi anda terakhir kali di Cex Store</p>
     </div>
     <div class="dashboard-content">
       <div class="row mt-3">
         <div class="col-12 mt-2">
-          <h5 class="mb-3">Transaksi Terakhir</h5>
           @foreach ($transaction_data as $transaction)
           <a href="{{ route('dashboard-transaction-details', $transaction->id) }}" class="card card-list d-block">
             <div class="card-body">

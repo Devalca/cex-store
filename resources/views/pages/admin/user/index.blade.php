@@ -12,8 +12,8 @@ User
     </a>
     <div class="container-fluid">
         <div class="dashboard-heading">
-            <h2 class="dashboard-title">Admin</h2>
-            <p class="dashboard-subtitle">Semua Admin</p>
+            <h2 class="dashboard-title text-white">Admin</h2>
+            <p class="dashboard-subtitle text-white">Semua Admin</p>
         </div>
         <div class="dashboard-content">
             <div class="row">
@@ -62,8 +62,8 @@ User
             </div>
             <br>
             <div class="dashboard-heading">
-                <h2 class="dashboard-title">User</h2>
-                <p class="dashboard-subtitle">Semua User</p>
+                <h2 class="dashboard-title text-white">User</h2>
+                <p class="dashboard-subtitle text-white">Semua User</p>
             </div>
             <div class="row">
                 <div class="col-md-12">

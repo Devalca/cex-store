@@ -28,7 +28,7 @@ class HomeController extends Controller
         $user = Auth::user();
 
         return view('/home', [
-            'games' => Game::latest()->paginate(10),
+            'games' => Game::latest()->paginate(8),
         ]);
     }
 }
