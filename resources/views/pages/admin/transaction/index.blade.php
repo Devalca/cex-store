@@ -32,7 +32,7 @@ Transaction
                                     <tbody> @foreach($transactions as $transaction)
                                         <tr>
                                             <td>{{$transactions->count() * ($transactions->currentPage() - 1) + $loop->iteration}}</td>
-                                            <td>{{$users->where('id', $transaction->users_id)->first()->name}}</td>
+                                            <td>{{$users->where('id', $transaction->users_id)->first() ? $users->where('id', $transaction->users_id)->first()->name : ''}}</td>
                                             <td>{{$transaction->total_cost}}</td>
                                             <td>{{$transaction->transaction_status}}</td>
                                             <td>{{$transaction->created_at}}</td>

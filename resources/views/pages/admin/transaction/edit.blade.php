@@ -37,7 +37,8 @@ Update Transaction
                                                     @if ($item->transaction_status == 'SUCCESS')
                                                     <option selected disabled value="{{ $item->transaction_status }}">{{ $item->transaction_status }}</option>
                                                     @elseif ($item->transaction_status == 'PENDING')
-                                                    <option selected disabled value="PENDING">PENDING</option>
+                                                    <option selected disabled value="{{ $item->transaction_status }}"> Status Saat INI : {{ $item->transaction_status }}</option>
+                                                    <option value="SUCCESS">SUCCESS</option>
                                                     @else
                                                     <option selected disabled value="{{ $item->transaction_status }}"> Status Saat INI : {{ $item->transaction_status }}</option>
                                                     <option value="SUCCESS">SUCCESS</option>
@@ -52,7 +53,7 @@ Update Transaction
                                             </div>
                                         </div>
                                     </div>
-                                    @if ($item->transaction_status == 'PAID')
+                                    @if ($item->transaction_status == 'PAID' || $item->transaction_status == 'PENDING')
                                     <div class="row py-3">
                                         <div class="col text-right">
                                             <button type="submit" class="btn btn-primary px-5">

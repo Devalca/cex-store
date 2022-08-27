@@ -68,7 +68,6 @@ class TransactionController extends Controller
     {
         $item = Transaction::findOrFail($id);
 
-
         return view('pages.admin.transaction.edit', [
             'item' => $item
         ]);
